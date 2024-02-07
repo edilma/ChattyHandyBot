@@ -1,0 +1,49 @@
+.chatBox {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    max-width: 60%;
+}
+
+.message-user {
+    background-color: rgb(68, 105, 227);
+    margin-left: auto;
+    text-align: right;
+}
+
+.message-fridge {
+    background-color: grey;
+    margin-right: auto;
+    text-align: left;
+}
+
+input[type="text"] {
+    width: calc(100% - 110px);
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
