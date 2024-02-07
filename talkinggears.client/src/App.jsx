@@ -11,21 +11,20 @@ function App() {
         if (!newMessage.trim()) return;
         
         const message = {
-            id: Date.now(),
+            id: 7,
             user: 'user',
             text: newMessage
         };
         setMessages([...messages, message]);
         setNewMessage('');
-        // Here you would add the call to the backend to send the message
-        //using fetch 
+        //Here we are calling the back end to send the message. Using fetch 
         try {
-            const response = await fetch('http://localhost:5000/message', {
+            const response = await fetch('https://localhost:7151/api/Chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ message: newMessage })
+                body: JSON.stringify(message)
             });
             // If the response is not ok, throw an error
             if (!response.ok) {
